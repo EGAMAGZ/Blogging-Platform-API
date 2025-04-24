@@ -1,0 +1,38 @@
+{
+  "imports": {
+    "@egamagz/todo": "jsr:@egamagz/todo@^1.0.0",
+    "@hono/zod-validator": "npm:@hono/zod-validator@^0.4.3",
+    "@prisma/client": "npm:@prisma/client@^6.6.0",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.3",
+    "hono": "jsr:@hono/hono@^4.7.7",
+    "neverthrow": "npm:neverthrow@^8.2.0",
+    "prisma": "npm:prisma@^6.6.0",
+    "zod": "npm:zod@^3.24.3",
+    "@/": "./"
+  },
+  "tasks": {
+    "start": "deno run -A main.ts",
+    "watch": "deno run -A --watch main.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push --skip-generate",
+    "prisma:studio": "prisma studio"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
+  },
+  "lint": {
+    "rules": {
+      "include": [
+        "eqeqeq",
+        "camelcase",
+        "explicit-function-return-type"
+      ],
+      "tags": ["recommended"]
+    }
+  },
+  "fmt": {
+    "singleQuote": true
+  },
+  "nodeModulesDir": "auto"
+}
