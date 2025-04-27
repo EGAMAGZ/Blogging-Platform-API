@@ -82,6 +82,15 @@ export class PostsRepository {
               { title: { contains: term } },
               { content: { contains: term } },
               { category: { name: { contains: term } } },
+              {
+                tags: {
+                  some: {
+                    name: {
+                      contains: term,
+                    }
+                  }
+                }
+              }
             ],
           }
           : undefined,
